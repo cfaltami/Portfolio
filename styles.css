@@ -23,8 +23,9 @@ h2 {
 
 /* Profile Picture */
 .profile-pic {
-    width: 400px;
-    height: 400px;
+    width: 50vw; /* 30% of the viewport width */
+    max-width: 300px; /* Don't go larger than 150px */
+    height: auto; /* Maintains aspect ratio */
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid #333;
@@ -100,4 +101,16 @@ footer {
     color: white;
     padding: 10px;
     margin-top: 20px;
+}
+
+/* Animation */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
 }
