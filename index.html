@@ -36,6 +36,7 @@
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#bio">Biography</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li><a href="#f-projects">Brainstorming / Working On It!</a></li>
             </ul></h2>            
         </nav>
     </header>
@@ -48,9 +49,40 @@
 
     <section id="projects">
         <h2 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Projects</h2>
-        <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">LED PCB From Circuits 2 Class <br> Converting computer PSU into bench power supply <br> Custom built personal desktop computer. <br> Portfolio Webpage.</p>
-    </section>
+    
+        <div class="project" onclick="toggleDetails('project1')">
+            <h3>LED PCB From Circuits 2 Class</h3>
+            <div id="project1" class="project-details">
+                <p>Designed and soldered a custom LED PCB for educational purposes using circuit design software and hands-on lab work.</p>
+            </div>
+        </div>
+    
+        <div class="project" onclick="toggleDetails('project2')">
+            <h3>Converting Computer PSU into Bench Power Supply</h3>
+            <div id="project2" class="project-details">
+                <p>Repurposed an old computer power supply to create a reliable bench power source for electronics projects.</p>
+            </div>
+        </div>
+    
+        <div class="project" onclick="toggleDetails('project3')">
+            <h3>Custom Built Personal Desktop Computer</h3>
+            <div id="project3" class="project-details">
+                <p>Designed and assembled a high-performance desktop PC optimized for programming and gaming.</p>
+            </div>
+        </div>
+    
+        <div class="project" onclick="toggleDetails('project4')">
+            <h3>Portfolio Webpage</h3>
+            <div id="project4" class="project-details">
+                <p>This responsive portfolio website made with HTML, CSS, and JavaScript showcasing my projects and background.</p>
+            </div>
+        </div>
+    </section>    
 
+    <section id="f-projects">
+        <h2 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Brainstorming / Working On It!</h2>
+        <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"> This portfolio webpage (constant improvement)<br> DIY CNC machine</p>
+    </section>
 
     <section id="bio">
         <h2 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Biography</h2>
@@ -72,7 +104,7 @@
               </div>
               
             <br> 
-        <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">At MTU, I've continued to develop both intellectually and emotionally. I am an IT technician on campus, where I fix hardware and software issues and maintain network infrastructure. I'm also involved in student organizations such as Alpha Phi Omega, where I've held leadership positions and coordinated service initiatives. My technological interests include embedded systems, computer hardware, and programming with languages such as HTML, Java, JavaScript, C++, Python, assembly code and Bash. I've always seen engineering as a method to bring ideas to life via logic and creativity, and I'm looking forward to continuing to develop, learn, and contribute—both in and outside the classroom.
+        <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">At MTU, I've continued to develop both intellectually and emotionally. I am an IT technician on campus, where I fix hardware and software issues and maintain network infrastructure. I'm also involved in student organizations such as Alpha Phi Omega, where I've held leadership positions and coordinated service initiatives. My technological interests include embedded systems, computer hardware, and programming with languages such as HTML, Java, JavaScript, C++, Python, assembly code and Bash. I've always seen engineering as a method to bring ideas to life via logic and creativity, and I'm looking forward to continuing to develop, learn, and contribute in and outside the classroom.
         </p>
     </section>
 
@@ -90,9 +122,25 @@
         <p>&copy; 2025 Felipe Altamirano</p>
     </footer>
     <!-- AOS JS -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
+     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js">
+     </script>
+     <script>
+     AOS.init();
+     </script>
+     <script>
+     function toggleDetails(id) {
+      var element = document.getElementById(id);
+      var project = element.parentElement;
+  
+      if (element.style.display === 'block') {
+        element.style.display = 'none';
+        project.classList.remove('active');
+      } else {
+        element.style.display = 'block';
+        project.classList.add('active');
+      }
+    }
+    </script>
+  
 </body>
 </html>
