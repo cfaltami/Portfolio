@@ -34,7 +34,7 @@
             <h2 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"><ul>
                 <li><a href="#about">About Me</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#f-projects">Brainstorming / Working On It!</a></li>
+                <li><a href="#f-projects">In Progress...</a></li>
                 <li><a href="#resume">Resume</a></li>
                 <li><a href="#bio">Biography</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -55,6 +55,10 @@
             <h3>LED PCB From Circuits 2 Class</h3>
             <div id="project1" class="project-details">
                 <p>Designed and soldered a custom LED PCB for educational purposes using circuit design software and hands-on lab work.</p>
+                <div class="bio-gallery" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <img src="pcb.jpg" alt="Printed Circuit Board" class="bio-pic" onclick="openModal(this)">
+                  </div>
+                  <p>The PCB was designed using Autodesk Edge, it uses a potentiometer, a capacitor, 6 resistors, a switch, two transistors, a NIC and 8 LED diodes. This was a good practice for prototyping, designing, milling and soldering.</p>
             </div>
         </div>
     
@@ -67,21 +71,37 @@
     </section>    
 
     <section id="f-projects">
-        <h2 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Projects</h2>
+        <h2 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">In Progress...</h2>
     
         <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" class="project" onclick="toggleDetails('f-project1')">
             <h3>Portfolio Webpage</h3>
             <div id="f-project1" class="project-details">
-                <p>Programmed a portfolio as first project using HTML and CSS.</p>
+                <p>Programmed a portfolio as first project using HTML, JavaScript and CSS.</p>
             </div>
         </div>
     
         <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" class="project" onclick="toggleDetails('f-project2')">
             <h3>Converting Computer PSU into Bench Power Supply</h3>
             <div id="f-project2" class="project-details">
-                <p>Repurposed an old computer power supply to create a reliable bench power source for electronics projects.</p>
+                <p>Repurposing an old computer's power supply into a bench Voltage Supply with 12V, 5V and 3.3V outputs. <br>
+                This project will require some work on the case, connecting all the outputs with the same voltage together, a load resistor, an extra switch and output plugs.</p>
             </div>
         </div>
+
+        <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" class="project" onclick="toggleDetails('f-project3')">
+            <h3>DIY Remote Controlled Car</h3>
+            <div id="f-project3" class="project-details">
+                <p>Simple circuit and structure RC car powered by a 5V phone power bank or 3.7V Li-ion battery.</p>
+            </div>
+        </div>
+
+        <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" class="project" onclick="toggleDetails('f-project4')">
+            <h3>DIY HexBot</h3>
+            <div id="f-project4" class="project-details">
+                <p>Practice for robotics and 3D-Printing. A robot with 2-D direction control, 6 legs and a cool design.</p>
+            </div>
+        </div>
+
     </section>
 
     <section id="resume">
