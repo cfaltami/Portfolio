@@ -1,6 +1,6 @@
 body {
     font-family: 'Times New Roman';
-    background-color: #534141;
+    background-color: #f0e5d8;
     margin: 0;
     padding: 0;
     text-align: center;
@@ -41,13 +41,13 @@ h2 {
     height: auto; /* Maintains aspect ratio */
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid #333;
+    border: 3px solid #000000;
     margin-top: 10px;
 }
 
 /* Navigation Styling */
 header {
-    background: #7a1c1c;
+    background: #567697;
     color: rgb(73, 73, 73);
     padding: 20px;
 }
@@ -63,14 +63,14 @@ nav ul li {
 }
 
 nav ul li a {
-    color: rgb(160, 97, 46);
+    color: #000000;
     text-decoration: none;
     font-weight: bold;
 }
 
 /* Sections */
 section {
-    background: rgb(160, 97, 46);
+    background: #A5c9ca;
     padding: 20px;
     margin: 20px auto;
     width: 80%;
@@ -81,7 +81,7 @@ section {
 .project {
     cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"><path fill="%23FFF" stroke="%23000" stroke-width="2" stroke-linejoin="round" d="M10 11V8.99c0-.88.59-1.64 1.44-1.86h.05A1.99 1.99 0 0 1 14 9.05V12v-2c0-.88.6-1.65 1.46-1.87h.05A1.98 1.98 0 0 1 18 10.06V13v-1.94a2 2 0 0 1 1.51-1.94h0A2 2 0 0 1 22 11.06V14c0 .6-.08 1.27-.21 1.97a7.96 7.96 0 0 1-7.55 6.48 54.98 54.98 0 0 1-4.48 0 7.96 7.96 0 0 1-7.55-6.48C2.08 15.27 2 14.59 2 14v-1.49c0-1.11.9-2.01 2.01-2.01h0a2 2 0 0 1 2.01 2.03l-.01.97v-10c0-1.1.9-2 2-2h0a2 2 0 0 1 2 2V11Z"></path></svg>'), auto; /* Changes to a hand */
     margin-bottom: 20px;
-    background-color: #7a1c1c;
+    background-color: #567697;
     padding: 10px;
     border-radius: 10px;
     transition: background-color 0.3s;
@@ -104,7 +104,7 @@ section {
 
 /* Contact Section */
 #contact {
-    background: rgb(160, 97, 46);
+    background: #A5c9ca;
     padding: 20px;
     margin: 20px auto;
     width: 80%;
@@ -115,7 +115,7 @@ section {
 /* Email Link Button */
 .email-link {
     display: inline-block;
-    background: #7a1c1c;
+    background: #567697;
     color: white;
     padding: 10px 20px;
     font-size: 20px;
@@ -145,7 +145,7 @@ section {
 }
 
 .btn {
-    background-color: #7a1c1c;
+    background-color: #567697;
     color: white;
     padding: 12px 20px;
     border: none;
@@ -235,7 +235,7 @@ footer {
 
 /* Styling for the Resume section */
 #resume {
-    background: rgb(160, 97, 46);
+    background: #A5c9ca;
     padding: 20px;
     margin: 20px auto;
     width: 80%;
