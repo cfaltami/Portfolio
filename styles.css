@@ -353,7 +353,7 @@ footer {
   /* Simple loading spinner */
   .loader {
     border: 8px solid #333;
-    border-top: 8px solid #00ccff;
+    border-top: 8px solid #a41f13;
     border-radius: 50%;
     width: 60px;
     height: 60px;
