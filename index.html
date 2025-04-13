@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap" rel="stylesheet">
+    <!-- AOS CSS -->
+     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<script>
+    function openModal(img) {
+      const modal = document.getElementById("imgModal");
+      const modalImg = document.getElementById("modalImage");
+      const captionText = document.getElementById("caption");
+      
+      modal.style.display = "block";
+      modalImg.src = img.src;
+      captionText.innerHTML = img.alt;
+    }
+  
+    function closeModal() {
+      document.getElementById("imgModal").style.display = "none";
+    }
+  </script>
+  
+<body>
+    <div id="loadingScreen">
+        <div class="loader"></div>
+        <p>Loading...</p>
+      </div>      
+    <header>
+        <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Felipe Altamirano</h1>
+        <nav>
+            <h2 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"><ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#f-projects">In Progress...</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#bio">Biography</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul></h2>            
+        </nav>
+    </header>
+
+    <section id="About Me">
+        <h2 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">About Me</h2>
+        <img data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" src="profile.jpg" alt="ProfPic" class="profile-pic">
+        <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"> Junior Computer and Electrical Engineering student at Michigan Technological University. Experience with programming, Information Technology , circuit desing and audio system builds. Welcome to my portfolio, this is where I want to share all my projects! </p>
+    </section>
+
+    <section id="projects">
+        <h2 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Projects</h2>
+    
+        <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" class="project" onclick="toggleDetails('project1')">
+            <h3>LED PCB From Circuits 2 Class</h3>
+            <div id="project1" class="project-details">
+                <p>Designed and soldered a custom LED PCB for educational purposes using circuit design software and hands-on lab work.</p>
+                <div class="bio-gallery" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <img src="pcb.jpg" alt="Printed Circuit Board" class="bio-pic" onclick="openModal(this)">
+                  </div>
+                  <p>The PCB was designed using Autodesk Edge, it uses a potentiometer, a capacitor, 6 resistors, a switch, two transistors, a NIC and 8 LED diodes. This was a good practice for prototyping, designing, milling and soldering.</p>
+            </div>
+        </div>
+    
+        <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" class="project" onclick="toggleDetails('project2')">
+            <h3>Custom Built Personal Desktop Computer</h3>
+            <div id="project2" class="project-details">
+                <p>Designed and assembled a high-performance desktop PC optimized for programming and gaming.</p>
+            </div>
+        </div>
+    </section>    
+
+    <section id="f-projects">
+        <h2 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">In Progress...</h2>
+    
+        <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" class="project" onclick="toggleDetails('f-project1')">
+            <h3>Portfolio Webpage</h3>
+            <div id="f-project1" class="project-details">
+                <p>Programmed a portfolio as first project using HTML, JavaScript and CSS.</p>
+            </div>
+        </div>
+    
+        <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" class="project" onclick="toggleDetails('f-project2')">
+            <h3>Converting Computer PSU into Bench Power Supply</h3>
+            <div id="f-project2" class="project-details">
+                <p>Repurposing an old computer's power supply into a bench Voltage Supply with 12V, 5V and 3.3V outputs. <br>
+                This project will require some work on the case, connecting all the outputs with the same voltage together, a load resistor, an extra switch and output plugs.</p>
+            </div>
+        </div>
+
+        <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" class="project" onclick="toggleDetails('f-project3')">
+            <h3>DIY Remote Controlled Car</h3>
+            <div id="f-project3" class="project-details">
+                <p>Simple circuit and structure RC car powered by a 5V phone power bank or 3.7V Li-ion battery.</p>
+            </div>
+        </div>
+
+        <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" class="project" onclick="toggleDetails('f-project4')">
+            <h3>DIY HexBot</h3>
+            <div id="f-project4" class="project-details">
+                <p>Practice for robotics and 3D-Printing. A robot with 2-D direction control, 6 legs and a cool design.</p>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="resume">
+        <h2>Resume</h2>
+        <p>Click the image below to view my full resume:</p>
+    
+        <!-- Preview image of the resume -->
+        <div class="resume-preview-container">
+            <img src="resume-thumbnail.jpg" alt="Resume Preview" class="resume-preview" id="resumePreview">
+        </div>
+    
+        <!-- Modal (hidden initially) -->
+        <div id="resumeModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" id="closeModal">&times;</span>
+                <iframe src="resume.pdf" class="resume-pdf" frameborder="0"></iframe>
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="bio">
+        <h2 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Biography</h2>
+        <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">My name is Felipe Altamirano, and I am a computer and electrical engineering student at Michigan Technological University. I was born and raised in Malargüe, Argentina, where my interest in technology began at a young age—I used to disassemble clocks, computers, and whatever else I could find. What began as early curiosity became a distinct aim at the age of seven, when a talk in an English class opened my eyes to the prospect of studying abroad. From that point forward, I dedicated myself to my dream, studying hard in school to achieve high grades and improve my talents. In 2023, after more than a decade of work, I was offered a full scholarship to study in the United States. 
+            <br>
+            <div class="bio-gallery" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                <img src="malargue.jpg" alt="Mgue" class="bio-pic" onclick="openModal(this)">
+                <img src="ctc.jpg" alt="CTC" class="bio-pic" onclick="openModal(this)">
+                <img src="bridge.jpg" alt="Bridge picture" class="bio-pic" onclick="openModal(this)">
+                <img src="apo.jpg" alt="Alpha Phi Omega" class="bio-pic" onclick="openModal(this)">
+                <img src="pcb.jpg" alt="Printed Circuit Board" class="bio-pic" onclick="openModal(this)">
+              </div>
+              
+              <!-- Modal for Zoom -->
+              <div id="imgModal" class="modal" onclick="closeModal()">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="modalImage">
+                <div id="caption"></div>
+              </div>
+              
+            <br> 
+        <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">At MTU, I've continued to develop both intellectually and emotionally. I am an IT technician on campus, where I fix hardware and software issues and maintain network infrastructure. I'm also involved in student organizations such as Alpha Phi Omega, where I've held leadership positions and coordinated service initiatives. My technological interests include embedded systems, computer hardware, and programming with languages such as HTML, Java, JavaScript, C++, Python, assembly code and Bash. I've always seen engineering as a method to bring ideas to life via logic and creativity, and I'm looking forward to continuing to develop, learn, and contribute in and outside the classroom.
+        </p>
+    </section>
+
+    <section id="contact">
+        <h2 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" >Contact and Social Media</h2>
+        <div class="social-buttons" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+            <a href="mailto:cfaltami@mtu.edu" class="btn" target="_blank">Email</a>
+            <a href="https://www.instagram.com/kenk.sw/" class="btn" target="_blank">Instagram</a>
+            <a href="https://www.facebook.com/profile.php?id=100008661189722" class="btn" target="_blank">Facebook</a>
+            <a href="https://www.linkedin.com/in/cfaltamirano/" class="btn" target="_blank">LinkedIn</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Felipe Altamirano</p>
+    </footer>
+    <!-- AOS JS -->
+     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js">
+     </script>
+     <script>
+     AOS.init();
+     </script>
+     <script>
+     function toggleDetails(id) {
+      var element = document.getElementById(id);
+      var project = element.parentElement;
+  
+      if (element.style.display === 'block') {
+        element.style.display = 'none';
+        project.classList.remove('active');
+      } else {
+        element.style.display = 'block';
+        project.classList.add('active');
+      }
+    }
+    </script>
+  <script src="script.js"></script>
+
+</body>
+</html>
